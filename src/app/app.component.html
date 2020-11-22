@@ -1,0 +1,20 @@
+<nb-layout withScroll [class.header-hidden]="!(layout$ | async)?.header">
+
+  <nb-layout-header *ngIf="(layout$ | async)?.header" class="Header header">
+    <div class="space Space5 space5" >
+      <img class="Image7 image7" src="./assets/images/alex-suprun-ZHvM3XIOHoE-unsplash-min.jpg">
+      <nb-icon class="Icon icon clickable-element large" (click)="logOut($event)" ngClass="hint" icon="log-out-outline"></nb-icon>
+    </div>
+  </nb-layout-header>
+
+  <nb-sidebar *ngIf="(layout$ | async)?.sidebar" class="Sidebar sidebar" responsive="true" [collapsedBreakpoints]="['xs', 'is', 'sm']" [compactedBreakpoints]="[]">
+    <div class="space SidebarSpace sidebar-space" >
+      <nb-menu class="Menu menu" [items]="items" ngClass="menu-text-basic"></nb-menu>
+    </div>
+  </nb-sidebar>
+
+  <nb-layout-column [style.padding]="padding$ | async">
+    <router-outlet></router-outlet>
+  </nb-layout-column>
+
+</nb-layout>

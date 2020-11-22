@@ -1,0 +1,363 @@
+:host {
+
+  width: 100%;
+  height: 450px;
+  margin: 0;
+  display: block;
+  
+  .heading {
+    font-size: 18px;
+    line-height: initial;
+    margin: 0 24px 0 0;
+  }
+    
+  .text1 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0 0 0 auto;
+  }
+    
+  .space131 {
+    height: 48px;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .space37 {
+    height: auto;
+    min-height: 2rem;
+    width: 100%;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .image3 {
+    margin: 0 16px 0 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 10rem;
+    object-fit: cover;
+  }
+    
+  .text9 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0 0 4px 0;
+  }
+    
+  .text10 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0;
+  }
+    
+  .space791 {
+    height: auto;
+    min-height: 2rem;
+    width: 75%;
+    & > * {
+      flex-basis: initial !important;
+    }
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .text11 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0 0 0 auto;
+  }
+    
+  .space52 {
+    height: auto;
+    min-height: 2rem;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 8px 0;
+    margin: 0 0 16px 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .image31 {
+    margin: 0 16px 0 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 10rem;
+    object-fit: cover;
+  }
+    
+  .text91 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0 0 4px 0;
+  }
+    
+  .text101 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0;
+  }
+    
+  .space7911 {
+    height: auto;
+    min-height: 2rem;
+    width: 75%;
+    & > * {
+      flex-basis: initial !important;
+    }
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .text111 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0 0 0 auto;
+  }
+    
+  .space521 {
+    height: auto;
+    min-height: 2rem;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 8px 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .space3 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .text {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0 auto 0 0;
+  }
+    
+  .button {
+    margin: 0 0 0 auto;
+    width: auto;
+    flex-direction: row;
+    > nb-icon.btn-icon.icon {
+      margin: -0.125rem .75rem -0.125rem 0;
+    }
+    
+    span {
+      display: inline;
+    }
+    
+    > nb-icon {
+      display: inline;
+    }
+    > nb-icon {
+      color: inherit;
+    }
+  }
+    
+  .space39 {
+    height: auto;
+    min-height: 2rem;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .message-list {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--background-basic-color-1);
+    background-size: auto;
+  }
+    
+  @media (max-width: 1024px) {
+    .space791 {
+      height: auto;
+      min-height: 2rem;
+      width: 58.333333333333336%;
+    }
+    
+    .space7911 {
+      height: auto;
+      min-height: 2rem;
+      width: 58.333333333333336%;
+    }
+    
+    .button {
+      > nb-icon {
+        color: inherit;
+      }
+    }width: 100%;
+    height: 580px;
+    flex-grow: 0;
+  }
+    
+  @media (max-width: 768px) {
+    .space791 {
+      height: auto;
+      min-height: 2rem;
+      width: 83.33333333333333%;
+    }
+    
+    .space7911 {
+      height: auto;
+      min-height: 2rem;
+      width: 83.33333333333333%;
+    }
+    
+    .button {
+      > nb-icon {
+        color: inherit;
+      }
+    }width: 100%;
+    height: auto;
+    margin: 0;
+    flex-grow: 0;
+  }
+    
+  @media (max-width: 480px) {
+    .space791 {
+      height: auto;
+      min-height: 2rem;
+      width: 66.66666666666667%;
+    }
+    
+    .text11 {
+      margin: 0 0 0 auto;
+    }
+    
+    .space52 {
+      height: auto;
+      min-height: 2rem;
+      width: 100%;
+      align-items: center;
+      align-content: center;
+    }
+    
+    .space7911 {
+      height: auto;
+      min-height: 2rem;
+      width: 66.66666666666667%;
+    }
+    
+    .text111 {
+      margin: 0 0 0 auto;
+    }
+    
+    .space521 {
+      height: auto;
+      min-height: 2rem;
+      width: 100%;
+      align-items: center;
+      align-content: center;
+    }
+    
+    .button {
+      > nb-icon {
+        color: inherit;
+      }
+    }width: 100%;
+    height: auto;
+    margin: 0;
+    flex-grow: 0;
+  }
+    
+  @media (max-width: 320px) {
+    .image3 {
+      width: 30px;
+      height: auto;
+      display: none;
+    }
+    
+    .space791 {
+      height: auto;
+      min-height: 2rem;
+      width: 66.66666666666667%;
+    }
+    
+    .space52 {
+      height: auto;
+      min-height: 2rem;
+      width: 100%;
+      padding: 8px 4px 8px 12px;
+    }
+    
+    .image31 {
+      width: 30px;
+      height: auto;
+      display: none;
+    }
+    
+    .space7911 {
+      height: auto;
+      min-height: 2rem;
+      width: 66.66666666666667%;
+    }
+    
+    .space521 {
+      height: auto;
+      min-height: 2rem;
+      width: 100%;
+      padding: 8px 4px 8px 12px;
+    }
+    
+    .text {
+      margin: 0 auto 0 0;
+    }
+    
+    .button {
+      width: auto;
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .space39 {
+      align-items: center;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+  
+}

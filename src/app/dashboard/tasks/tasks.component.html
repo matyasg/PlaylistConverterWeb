@@ -1,0 +1,17 @@
+<nb-card class="Tasks tasks">
+  <nb-card-header>
+    <div class="space Space6 space6" >
+      <h6 class="Heading1 heading1 text-alignment-left text-transform-none" [ngClass]="'text-' + (color$ | async)">Tasks</h6>
+      <button nbButton class="Button1 button1  size-xl-medium size-md-small size-sm-tiny size-xs-small iconPlacement-xl-left" appearance="filled" status="primary">
+        <nb-icon class="icon btn-icon" icon="plus-outline"></nb-icon>
+        <span>Add Task</span>
+      </button>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body>
+    <div class="space Space space-component" >
+      <app-table1111></app-table1111>
+    </div>
+  </nb-card-body>
+</nb-card>

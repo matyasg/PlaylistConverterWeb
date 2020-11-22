@@ -1,0 +1,45 @@
+<nb-card class="MessageList message-list">
+  <nb-card-header>
+    <div class="space Space37 space37" >
+      <div class="space Space131 space131" >
+        <h6 class="Heading heading text-alignment-left text-transform-none" ngClass="text-basic">Messages</h6>
+        <p class="Text1 text1 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color1$ | async)"> New messages</p>
+      </div>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body>
+    <div class="space Space3 space3" >
+      <ng-container *ngFor="let item of sequenceSpace52$ | async; index as index">
+        <div class="space Space52 space52" >
+          <img class="Image3 image3" [src]="srcXl(item)">
+          <div class="space Space791 space791" >
+            <p class="Text9 text9 text-bold text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color2$ | async)">Margo</p>
+            <p class="Text10 text10 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color3$ | async)">{{ text }}</p>
+          </div>
+          <p class="Text11 text11 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color4$ | async)">26 Aprl</p>
+        </div>
+      </ng-container>
+      <ng-container *ngFor="let item of sequenceSpace521$ | async; index as index">
+        <div class="space Space521 space521" >
+          <img class="Image31 image31" [src]="srcXl1(item)">
+          <div class="space Space7911 space7911" >
+            <p class="Text91 text91 text-bold text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color5$ | async)">Margo</p>
+            <p class="Text101 text101 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color6$ | async)">{{ text1 }}</p>
+          </div>
+          <p class="Text111 text111 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color7$ | async)">26 Aprl</p>
+        </div>
+      </ng-container>
+    </div>
+  </nb-card-body>
+
+  <nb-card-footer>
+    <div class="space Space39 space39" >
+      <p class="Text text text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color8$ | async)">Mark as unread</p>
+      <button nbButton class="Button button  size-xl-medium size-md-small size-sm-tiny size-xs-small iconPlacement-xl-left" appearance="filled" status="primary">
+        <nb-icon class="icon btn-icon" icon="message-circle"></nb-icon>
+        <span>Read All</span>
+      </button>
+    </div>
+  </nb-card-footer>
+</nb-card>

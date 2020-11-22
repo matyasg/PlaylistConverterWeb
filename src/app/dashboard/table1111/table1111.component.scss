@@ -1,0 +1,593 @@
+:host {
+
+  width: 100%;
+  height: auto;
+  display: block;
+  
+  .space7111 {
+    height: 48px;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .text36 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0;
+  }
+    
+  .space8111 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .button7 {
+    width: auto;
+    flex-direction: row;
+    > nb-icon.btn-icon.icon {
+      margin: -0.125rem 0 -0.125rem 0;
+    }
+    
+    span {
+      display: none;
+    }
+    
+    > nb-icon {
+      display: inline;
+    }
+    > nb-icon {
+      color: inherit;
+    }
+  }
+    
+  .space43111 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .table1111-header {
+    background-color: unset;
+  }
+    
+  .space9111 {
+    height: 48px;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .text37 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0;
+  }
+    
+  .space10111 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .button8 {
+    width: auto;
+    flex-direction: row;
+    > nb-icon.btn-icon.icon {
+      margin: -0.125rem 0 -0.125rem 0;
+    }
+    
+    span {
+      display: none;
+    }
+    
+    > nb-icon {
+      display: inline;
+    }
+    > nb-icon {
+      color: inherit;
+    }
+  }
+    
+  .space43311 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .table1111-row {
+    background-color: unset;
+  }
+    
+  .space12111 {
+    height: 48px;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .text38 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0;
+  }
+    
+  .space38111 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .button9 {
+    width: auto;
+    flex-direction: row;
+    > nb-icon.btn-icon.icon {
+      margin: -0.125rem 0 -0.125rem 0;
+    }
+    
+    span {
+      display: none;
+    }
+    
+    > nb-icon {
+      display: inline;
+    }
+    > nb-icon {
+      color: inherit;
+    }
+  }
+    
+  .space43411 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .table1111-row1 {
+    background-color: unset;
+  }
+    
+  .space41111 {
+    height: 48px;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .text39 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0;
+  }
+    
+  .space41211 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .button10 {
+    width: auto;
+    flex-direction: row;
+    > nb-icon.btn-icon.icon {
+      margin: -0.125rem 0 -0.125rem 0;
+    }
+    
+    span {
+      display: none;
+    }
+    
+    > nb-icon {
+      display: inline;
+    }
+    > nb-icon {
+      color: inherit;
+    }
+  }
+    
+  .space43511 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    padding: 0 0 4px 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .table1111-row2 {
+    background-color: unset;
+  }
+    
+  .space41311 {
+    height: 48px;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .text40 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0;
+  }
+    
+  .space41411 {
+    height: auto;
+    min-height: 2rem;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .button11 {
+    width: auto;
+    flex-direction: row;
+    > nb-icon.btn-icon.icon {
+      margin: -0.125rem 0 -0.125rem 0;
+    }
+    
+    span {
+      display: none;
+    }
+    
+    > nb-icon {
+      display: inline;
+    }
+    > nb-icon {
+      color: inherit;
+    }
+  }
+    
+  .space43611 {
+    height: auto;
+    min-height: 2rem;
+    width: 100%;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-end;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .table1111-row3 {
+    background-color: unset;
+  }
+    
+  .space41511 {
+    height: 48px;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .text41 {
+    font-size: 15px;
+    line-height: initial;
+    margin: 0;
+  }
+    
+  .space41611 {
+    height: auto;
+    min-height: 2rem;
+    width: 100%;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .button12 {
+    width: auto;
+    flex-direction: row;
+    > nb-icon.btn-icon.icon {
+      margin: -0.125rem 0 -0.125rem 0;
+    }
+    
+    span {
+      display: none;
+    }
+    
+    > nb-icon {
+      display: inline;
+    }
+    > nb-icon {
+      color: inherit;
+    }
+  }
+    
+  .space43711 {
+    height: auto;
+    min-height: 2rem;
+    width: 100%;
+    align-items: flex-start;
+    align-content: flex-start;
+    justify-content: flex-end;
+    padding: 0;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .table1111-row4 {
+    background-color: unset;
+  }
+    
+  .table1111 {
+  
+    width: 100%;
+    height: 100%;
+    background-color: unset;
+    
+    .column1 {
+      width: 250px;
+    }  
+    .column2 {
+      width: 100px;
+    }  
+    .column3 {
+      width: 40px;
+    }
+  }  
+  @media (max-width: 1024px) {
+    .button7 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button8 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button9 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button10 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button11 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button12 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+  }
+    
+  @media (max-width: 768px) {
+    .button7 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button8 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button9 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button10 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button11 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .space43611 {
+      padding: 0;
+    }
+    
+    .button12 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .space43711 {
+      padding: 0;
+    }
+  }
+    
+  @media (max-width: 480px) {
+    .button7 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button8 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button9 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button10 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button11 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button12 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+  }
+    
+  @media (max-width: 320px) {
+    .button7 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button8 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button9 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button10 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button11 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .button12 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+  }
+  
+}

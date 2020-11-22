@@ -1,0 +1,147 @@
+:host {
+
+  width: 100%;
+  height: auto;
+  margin: 0;
+  display: block;
+  
+  .heading5 {
+    font-size: 18px;
+    line-height: initial;
+    margin: 0 24px 0 0;
+  }
+    
+  .text8 {
+    font-size: 13px;
+    line-height: initial;
+    margin: 0 16px 0 auto;
+  }
+    
+  .button2 {
+    margin: 0 0 0 12px;
+    width: auto;
+    flex-direction: row;
+    > nb-icon.btn-icon.icon {
+      margin: -0.125rem .75rem -0.125rem 0;
+    }
+    
+    span {
+      display: inline;
+    }
+    
+    > nb-icon {
+      display: inline;
+    }
+    > nb-icon {
+      color: inherit;
+    }
+  }
+    
+  .space8 {
+    height: 100%;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .space7 {
+    height: auto;
+    min-height: 2rem;
+    flex-grow: 1;
+    flex-basis: 0;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: flex-start;
+    overflow: visible;
+    background-color: unset;
+    background-size: auto;
+  }
+    
+  .users-table {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: var(--background-basic-color-1);
+    background-size: auto;
+  }
+    
+  @media (max-width: 1024px) {
+    .button2 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+  }
+    
+  @media (max-width: 768px) {
+    .text8 {
+      margin: 0 0 0 auto;
+    }
+    
+    .button2 {
+      > nb-icon {
+        color: inherit;
+      }
+    }width: 100%;
+    height: auto;
+    margin: 0;
+    flex-grow: 0;
+  }
+    
+  @media (max-width: 480px) {
+    .text8 {
+      margin: 0 0 4px 0;
+      display: none;
+    }
+    
+    .button2 {
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .space8 {
+      justify-content: space-between;
+      padding: 0;
+    }width: 100%;
+    height: 220px;
+    flex-grow: 0;
+  }
+    
+  @media (max-width: 320px) {
+    .heading5 {
+      margin: 0;
+    }
+    
+    .text8 {
+      margin: 0 0 8px 0;
+    }
+    
+    .button2 {
+      margin: 0;
+      width: auto;
+      > nb-icon {
+        color: inherit;
+      }
+    }
+    
+    .space8 {
+      align-items: center;
+      align-content: center;
+      justify-content: space-between;
+    }
+    
+    .space7 {
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }width: 100%;
+    height: auto;
+    flex-grow: 0;
+  }
+  
+}

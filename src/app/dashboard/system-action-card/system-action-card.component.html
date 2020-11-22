@@ -1,0 +1,14 @@
+<nb-card class="SystemActionCard system-action-card" accent="danger">
+  <nb-card-body>
+    <div class="space Space12 space12" >
+      <div class="space Space4311111 space4311111" >
+        <nb-icon class="Icon111 icon111" ngClass="danger" icon="alert-triangle"></nb-icon>
+      </div>
+      <div class="space Space431111 space431111" >
+        <h6 class="Heading4 heading4 text-alignment-left text-transform-none" ngClass="text-basic">System</h6>
+        <p class="Text6 text6 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color2$ | async)">2 updates</p>
+      </div>
+      <p class="Text7 text7 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color3$ | async)">More</p>
+    </div>
+  </nb-card-body>
+</nb-card>

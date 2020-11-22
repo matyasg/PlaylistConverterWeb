@@ -1,0 +1,17 @@
+<nb-card class="UsersTable users-table">
+  <nb-card-header>
+    <div class="space Space8 space8" >
+      <h6 class="Heading5 heading5 text-alignment-left text-transform-none" [ngClass]="'text-' + (color$ | async)">Your playlists</h6>
+      <p class="Text8 text8 text-alignment-left text-transform-none paragraph-2" [ngClass]="'text-' + (color1$ | async)"></p>
+      <button nbButton class="Button2 button2  size-xl-medium size-md-small size-sm-tiny size-xs-small iconPlacement-xl-left" appearance="filled" status="primary">
+        <span>Check</span>
+      </button>
+    </div>
+  </nb-card-header>
+
+  <nb-card-body>
+    <div class="space Space7 space7" >
+      <app-table12 [playlists]="playlists" ></app-table12>
+    </div>
+  </nb-card-body>
+</nb-card>
