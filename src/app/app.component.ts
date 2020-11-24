@@ -70,7 +70,7 @@ export class AppComponent {
   }
 
   logOut(event) {
-    this.store.dispatch(AppActions.logOut({ param: event }));
+      window.location.reload();
   }
 
   private getPaddingCssValue(paddings): string {

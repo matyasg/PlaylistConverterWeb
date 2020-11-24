@@ -2,20 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc9e6854-8e42-4696-8574-a2b8d8bd15e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/images/am_icon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/spotify_icon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/SpotyApple.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/am_icon.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/table12/table12.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/table12/table12.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/table12/table12.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/table12/table12.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/am_icon.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606039452398</updated>
-      <workItem from="1606039453657" duration="31462000" />
+      <workItem from="1606039453657" duration="31556000" />
+      <workItem from="1606244904516" duration="2631000" />
+      <workItem from="1606247952959" duration="3076000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1606039908883</created>
@@ -104,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606176300696</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ver 0.1">
+      <created>1606227020381</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1606227020381</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -113,39 +123,44 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="getCoverage of spoty playlists in AM" />
-    <option name="LAST_COMMIT_MESSAGE" value="getCoverage of spoty playlists in AM" />
+    <MESSAGE value="ver 0.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="ver 0.1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="347" y="40" key="CommitChangelistDialog2" timestamp="1606176300371">
+    <state x="347" y="40" key="CommitChangelistDialog2" timestamp="1606227020079">
       <screen x="0" y="25" width="1536" height="870" />
     </state>
     <state x="347" y="66" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1606039908443" />
-    <state x="347" y="40" key="CommitChangelistDialog2/0.25.1536.870@0.25.1536.870" timestamp="1606176300371" />
-    <state width="1515" height="224" key="GridCell.Tab.0.bottom" timestamp="1606203056408">
-      <screen x="0" y="25" width="1536" height="870" />
+    <state x="347" y="40" key="CommitChangelistDialog2/0.25.1536.870@0.25.1536.870" timestamp="1606227020079" />
+    <state width="1515" height="224" key="GridCell.Tab.0.bottom" timestamp="1606227064119">
+      <screen x="0" y="25" width="1536" height="872" />
     </state>
     <state width="1515" height="256" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1606039600078" />
     <state width="1515" height="224" key="GridCell.Tab.0.bottom/0.25.1536.870@0.25.1536.870" timestamp="1606203056408" />
-    <state width="1515" height="224" key="GridCell.Tab.0.center" timestamp="1606203056407">
-      <screen x="0" y="25" width="1536" height="870" />
+    <state width="1515" height="224" key="GridCell.Tab.0.bottom/0.25.1536.872@0.25.1536.872" timestamp="1606227064119" />
+    <state width="1515" height="224" key="GridCell.Tab.0.center" timestamp="1606227064119">
+      <screen x="0" y="25" width="1536" height="872" />
     </state>
     <state width="1515" height="256" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1606039600076" />
     <state width="1515" height="224" key="GridCell.Tab.0.center/0.25.1536.870@0.25.1536.870" timestamp="1606203056407" />
-    <state width="1515" height="224" key="GridCell.Tab.0.left" timestamp="1606203056406">
-      <screen x="0" y="25" width="1536" height="870" />
+    <state width="1515" height="224" key="GridCell.Tab.0.center/0.25.1536.872@0.25.1536.872" timestamp="1606227064119" />
+    <state width="1515" height="224" key="GridCell.Tab.0.left" timestamp="1606227064118">
+      <screen x="0" y="25" width="1536" height="872" />
     </state>
     <state width="1515" height="256" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1606039600075" />
     <state width="1515" height="224" key="GridCell.Tab.0.left/0.25.1536.870@0.25.1536.870" timestamp="1606203056406" />
-    <state width="1515" height="224" key="GridCell.Tab.0.right" timestamp="1606203056407">
-      <screen x="0" y="25" width="1536" height="870" />
+    <state width="1515" height="224" key="GridCell.Tab.0.left/0.25.1536.872@0.25.1536.872" timestamp="1606227064118" />
+    <state width="1515" height="224" key="GridCell.Tab.0.right" timestamp="1606227064119">
+      <screen x="0" y="25" width="1536" height="872" />
     </state>
     <state width="1515" height="256" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1606039600077" />
     <state width="1515" height="224" key="GridCell.Tab.0.right/0.25.1536.870@0.25.1536.870" timestamp="1606203056407" />
-    <state x="368" y="223" key="Vcs.Push.Dialog.v2" timestamp="1606176302480">
+    <state width="1515" height="224" key="GridCell.Tab.0.right/0.25.1536.872@0.25.1536.872" timestamp="1606227064119" />
+    <state x="368" y="223" key="Vcs.Push.Dialog.v2" timestamp="1606227021834">
       <screen x="0" y="25" width="1536" height="870" />
     </state>
     <state x="368" y="218" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1606039913995" />
-    <state x="368" y="223" key="Vcs.Push.Dialog.v2/0.25.1536.870@0.25.1536.870" timestamp="1606176302480" />
+    <state x="368" y="223" key="Vcs.Push.Dialog.v2/0.25.1536.870@0.25.1536.870" timestamp="1606227021834" />
     <state x="518" y="231" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1606039835259">
       <screen x="0" y="0" width="1536" height="960" />
     </state>

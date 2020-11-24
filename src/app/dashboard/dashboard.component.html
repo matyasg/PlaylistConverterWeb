@@ -1,12 +1,13 @@
 <div class="space Space4 space4" >
   <div class="space Space610 space610" >
     <div class="space Space31 space31" >
-      <app-new-message-action-card [platform]="'Apple Music'" [login]="loginAppleMusic" [user]="userAM"></app-new-message-action-card>
+      <app-new-message-action-card [platform]="'Apple Music'" [login]="loginAppleMusic" [getPlaylist]="getAMPlaylist" [user]="userAM"></app-new-message-action-card>
     </div>
     <div class="space Space41 space41" >
-      <app-new-message-action-card [platform]="'Spotify'" [login]="loginSpotify" [user]="userSpotify"></app-new-message-action-card>
+      <app-new-message-action-card [platform]="'Spotify'" [login]="loginSpotify" [getPlaylist]="getSpotifyPlaylist" [user]="userSpotify"></app-new-message-action-card>
     </div>
   </div>
+
   <div class="space Space2 space2">
     <app-users-table [playlists]="this.playlistsObservable$" [values]="this.valuesObservable$"
                      [changeValue]="changeValue" [getCoverage]="getCoverage" [checkedLists]="this.checkedListsObservable$"

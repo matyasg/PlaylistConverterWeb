@@ -1,13 +1,15 @@
 <nb-card class="NewMessageActionCard new-message-action-card" accent="warning">
   <nb-card-body>
     <div class="space Space9 space9" >
-      <img class="Image image" src="{{(user |async)?(user |async).url:(this.platform==='Spotify' ? './assets/images/spotify_icon.svg':'./assets/images/am_icon.jpg')}}">
+      <img class="Image image" src="{{(user |async)?(user |async).url:(this.platform==='Spotify' ? './assets/images/spotify_icon.svg':'./assets/images/am_icon.webp')}}">
       <div class="space Space432 space432" >
         <h6 class="Heading2 heading2 text-alignment-left text-transform-none" ngClass="text-basic">{{(user|async)?(user |async).name:''}}</h6>
         <p class="Text2 text2 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color1$ | async)">
           {{(user|async)?(user |async).id:''}}</p>
+        <button id="playlist-btn" class="btn-primary playlist" (click)="getPlaylist()" *ngIf="(user|async)">Get Playlists</button>
       </div>
       <p class="Text3 text3 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color2$ | async)">
+
         <button id="login-btn" class="btn-primary" (click)="login()">Login</button>
 <!--        <apple-signin   [state]="yourStateVar"
                         [redirectURI]='"http://localhost:4200"'

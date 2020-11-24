@@ -14,6 +14,7 @@ export class NewMessageActionCardComponent implements OnInit {
   @Input() platform: string;
   @Input() user: Observable<User>;
   @Input() login: () => void;
+  @Input() getPlaylist: () => void;
 
   src$ = this.themeService.onMediaQueryChange().pipe(
     switchMap(([, breakpoint]) => this.getCurrentValue(breakpoint, 'src')),

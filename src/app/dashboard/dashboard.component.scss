@@ -339,6 +339,10 @@
       }
       flex-direction: column;
     }
+
+    ::ng-deep snack-bar-container {
+      background: yellow;
+    }
   }
 
 }

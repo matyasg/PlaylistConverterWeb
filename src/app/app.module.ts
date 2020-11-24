@@ -24,7 +24,8 @@ import { EffectsModule } from '@ngrx/effects';
 import * as fromApp from './state/app.reducer';
 import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
 import { LIGHT_THEME } from './theme';
-import { AppleSigninModule } from 'ngx-apple-signin'
+import { AppleSigninModule } from 'ngx-apple-signin';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 const mediaBreakpoints: NbMediaBreakpoint[] = [
   {
@@ -72,6 +73,7 @@ const mediaBreakpoints: NbMediaBreakpoint[] = [
     EffectsModule.forRoot(RootEffects),
     StoreRouterConnectingModule.forRoot(),
     AppleSigninModule,
+    MatSnackBarModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
