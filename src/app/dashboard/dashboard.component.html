@@ -1,7 +1,7 @@
 <div class="space Space4 space4" >
   <div class="space Space610 space610" >
     <div class="space Space31 space31" >
-      <app-new-message-action-card [platform]="'AppleMusic'" [login]="loginAppleMusic" [user]="userAM"></app-new-message-action-card>
+      <app-new-message-action-card [platform]="'Apple Music'" [login]="loginAppleMusic" [user]="userAM"></app-new-message-action-card>
     </div>
     <div class="space Space41 space41" >
       <app-new-message-action-card [platform]="'Spotify'" [login]="loginSpotify" [user]="userSpotify"></app-new-message-action-card>
@@ -9,28 +9,7 @@
   </div>
   <div class="space Space2 space2">
     <app-users-table [playlists]="this.playlistsObservable$" [values]="this.valuesObservable$"
-                     [changeValue]="changeValue" [getCoverage]="getCoverage"></app-users-table>
+                     [changeValue]="changeValue" [getCoverage]="getCoverage" [checkedLists]="this.checkedListsObservable$"
+                      [createPlaylists]="createPlaylists"></app-users-table>
   </div>
-  <ng-template #content let-modal>
-    <div class="modal-header">
-      <h4 class="modal-title" id="modal-basic-title">Profile update</h4>
-      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-      <form>
-        TEST
-      </form>
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-    </div>
-  </ng-template>
-
-  <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-
-  <hr>
-
-  <pre>{{ closeResult }}</pre>
 </div>

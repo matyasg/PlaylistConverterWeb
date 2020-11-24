@@ -197,11 +197,12 @@ export class Table12Component implements OnInit {
       'color15': of(`basic`)
     }
   };
+  public choosenId: number;
 
   constructor(private themeService: NbThemeService, private modalService: NgbModal) {
   }
 
-  private getCurrentValue(breakpoint: NbMediaBreakpoint, propName: string, ...itemsArgs: any[]): string {
+  private getCurrentValue (breakpoint: NbMediaBreakpoint, propName: string, ...itemsArgs: any[]): string {
     const bpConfig = this.responsiveConfig[breakpoint.width];
     let result;
     if (bpConfig && bpConfig[propName]) {
@@ -229,7 +230,12 @@ export class Table12Component implements OnInit {
   ngOnInit(): void {
   }
 
-  openScrollableContent(longContent) {
+  openScrollableContent(longContent, choosenId) {
+    this.choosenId = choosenId;
     this.modalService.open(longContent, { scrollable: true });
+  }
+
+  objectToString(item) {
+    return '' + item.artist + ' : ' + item.title;
   }
 }

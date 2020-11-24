@@ -34,8 +34,10 @@ export class DashboardComponent implements OnInit {
   userAMObservable$: Observable<User> = this.userAM.asObservable();
   values = new BehaviorSubject<boolean[]>(null);
   valuesObservable$: Observable<boolean[]> = this.values.asObservable();
+  checkedLists = new BehaviorSubject<boolean>(null);
+  checkedListsObservable$: Observable<boolean> = this.checkedLists.asObservable();
+  lastLoggedService = '';
 
-  closeResult='';
   constructor(private modalService: NgbModal) {
     this.music = MusicKit.configure({
       developerToken: env.dev_token,
@@ -44,24 +46,7 @@ export class DashboardComponent implements OnInit {
         build: '2020.4.1'
       }
     });
-  }
-
-  open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
-  }
-
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return `with: ${reason}`;
-    }
+    this.checkedLists.next(false);
   }
 
   ngOnInit(): void {
@@ -73,61 +58,79 @@ export class DashboardComponent implements OnInit {
       console.log(`Authorized, music-user-token: ${musicUserToken}`);
       const options = {
         headers: {
-          Authorization: 'Bearer ' + MusicKit.getInstance().developerToken,
+          // Authorization: 'Bearer ' + MusicKit.getInstance().developerToken,
           Accept: 'application/json',
           'Content-Type': 'application/json',
-          'music-user-token': '' + MusicKit.getInstance().musicUserToken,
+          'Music-User-Token': '' + MusicKit.getInstance().musicUserToken,
         }
       };
+      const tempUser = {
+        name : 'User',
+        id : 'Logged in to Apple Music',
+        url : './assets/images/am_icon.jpg',
+      };
+      this.userAM.next(tempUser);
       this.isAppleMusicLoggedIn = true;
-      fetch('https://api.music.apple.com/v1/me/library/playlists/', options)
+      fetch('http://localhost:8090/api/am/getPlaylists', options)
         .then(response => response.json()).then( res => {
         console.log(res);
-        let temp = [];
-        res.data.forEach(data => {
-          temp.push(data.attributes);
+        const temp = [];
+        res.playlists[0].forEach(data => {
+          temp.push((data).attributes);
         });
+        console.log(temp);
         this.playlists.next(temp);
-        console.log(this.playlists.getValue());
+        this.values.next(new Array(this.playlists.getValue().length).fill(false));
+        // console.log(this.playlists.getValue());
+        this.lastLoggedService = 'am';
       }, err => console.log(err));
+
     });
   }
 
   loginSpotify = (): void => {
     fetch('http://localhost:8090/api/spotify/getUser').then(res => res.json().then(result => {
       this.isSpotifyLoggedIn = true;
-      //console.log(result);
-      let tempUser = {
+      // console.log(result);
+      const tempUser = {
         name : result.display_name,
-        id : result.id,
+        id : "Logged in to Spotify",
         url : result.images[0].url,
       };
 
-      //console.log(tempUser);
+      // console.log(tempUser);
       this.userSpotify.next(tempUser);
       fetch('http://localhost:8090/api/spotify/getPlaylists').then( res_ => res_.json().then( result_ => {
-        let temp = [];
+        const temp = [];
         console.log(result_);
         result_.playlists[0].forEach(data => {
           temp.push(data);
         });
         this.playlists.next(temp);
         this.values.next(new Array(this.playlists.getValue().length).fill(false));
-        //console.log(this.values.getValue());
+        // console.log(this.values.getValue());
+        this.lastLoggedService = 'sp';
       }));
     }));
   }
 
   getCoverage = (): void => {
-
-    fetch('http://localhost:8090/api/spotify/getCoverage',
-    {
-      method: 'POST', // or 'PUT'
+    let url = '';
+    switch (this.lastLoggedService) {
+      case 'sp': url = 'http://localhost:8090/api/spotify/getCoverage';
+      break;
+      case 'am': url = 'http://localhost:8090/api/am/getCoverage';
+      break;
+    }
+    fetch(url,
+        {
+          method: 'POST', // or 'PUT'
           headers: {
-      'Content-Type': 'application/json',
-    },
-      body: JSON.stringify({'values': this.values.getValue()}),
-    }).then( res_ => res_.json().then( result_ => {
+            'Content-Type': 'application/json',
+            'Music-User-Token': '' + this.lastLoggedService === 'am' ? MusicKit.getInstance().musicUserToken : '',
+          },
+          body: JSON.stringify({'values': this.values.getValue()}),
+        }).then( res_ => res_.json().then( result_ => {
       const temp = this.playlists.getValue();
       for (let i = 0; i < temp.length; i++) {
         temp[i]['numOfSongs'] = result_[i].numOfSongs;
@@ -135,19 +138,35 @@ export class DashboardComponent implements OnInit {
         temp[i]['coverage'] = result_[i].coverage;
       }
       this.playlists.next(temp);
+      this.checkedLists.next(true);
       // console.log(temp);
     }));
   }
 
-  generateRandomString = function(length) {
-    let text = '';
-    const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-
-    for (let i = 0; i < length; i++) {
-      text += possible.charAt(Math.floor(Math.random() * possible.length));
+  createPlaylists = (): void => {
+    let url = '';
+    switch (this.lastLoggedService) {
+      case 'sp': url = 'http://localhost:8090/api/spotify/createPlaylists';
+        break;
+      case 'am': url = 'http://localhost:8090/api/am/createPlaylists';
+        break;
     }
-    return text;
-  };
+    fetch ( url ,
+        {
+          method: 'POST', // or 'PUT'
+          headers: {
+            'Content-Type': 'application/json',
+            'Music-User-Token': '' + this.lastLoggedService === 'sp' ? MusicKit.getInstance().musicUserToken : '',
+          },
+          body: JSON.stringify({'values': this.values.getValue()}),
+        }).then( res_ => res_.json().then( result_ => {
+      const temp = this.playlists.getValue();
+
+      // this.playlists.next(temp);
+      // this.checkedLists.next(true);
+      // console.log(temp);
+    }));
+  }
 
   changeValue = (id: number): void => {
     const temp = this.values.getValue();

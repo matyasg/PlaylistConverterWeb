@@ -31,9 +31,13 @@
               "./node_modules/leaflet/dist/leaflet.css",
               "src/styles.scss",
               "node_modules/eva-icons/style/eva-icons.css",
-              "node_modules/typeface-open-sans/index.css"
+              "node_modules/typeface-open-sans/index.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {

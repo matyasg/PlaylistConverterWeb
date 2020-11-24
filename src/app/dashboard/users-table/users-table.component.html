@@ -7,6 +7,10 @@
               appearance="filled" status="primary" (click)="getCoverage()">
         <span>Check</span>
       </button>
+      <button nbButton class="Button2 button2  size-xl-medium size-md-small size-sm-tiny size-xs-small iconPlacement-xl-left"
+              appearance="filled" status="primary" [disabled]="!(checkedLists|async)" (click)="createPlaylists()"  >
+        <span>Create Playlists</span>
+      </button>
     </div>
   </nb-card-header>
 

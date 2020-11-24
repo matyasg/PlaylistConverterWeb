@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc9e6854-8e42-4696-8574-a2b8d8bd15e8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/PlaylistConverterWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PlaylistConverterWeb.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/am_icon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/spotify_icon.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/table12/table12.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/table12/table12.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/table12/table12.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/table12/table12.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/polyfills.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +44,11 @@
     <property name="settings.editor.selected.configurable" value="settings.nodejs" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+    </key>
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
     <configuration name="Tests (SampleProject)" type="JavaScriptTestRunnerKarma">
@@ -81,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606039452398</updated>
-      <workItem from="1606039453657" duration="15338000" />
+      <workItem from="1606039453657" duration="31462000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1606039908883</created>
@@ -90,7 +97,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606039908883</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="getCoverage of spoty playlists in AM">
+      <created>1606176300696</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1606176300696</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,33 +112,40 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="init commit" />
+    <MESSAGE value="getCoverage of spoty playlists in AM" />
+    <option name="LAST_COMMIT_MESSAGE" value="getCoverage of spoty playlists in AM" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="347" y="66" key="CommitChangelistDialog2" timestamp="1606039908443">
-      <screen x="0" y="0" width="1536" height="960" />
+    <state x="347" y="40" key="CommitChangelistDialog2" timestamp="1606176300371">
+      <screen x="0" y="25" width="1536" height="870" />
     </state>
     <state x="347" y="66" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1606039908443" />
-    <state width="1515" height="256" key="GridCell.Tab.0.bottom" timestamp="1606039600078">
-      <screen x="0" y="0" width="1536" height="960" />
+    <state x="347" y="40" key="CommitChangelistDialog2/0.25.1536.870@0.25.1536.870" timestamp="1606176300371" />
+    <state width="1515" height="224" key="GridCell.Tab.0.bottom" timestamp="1606203056408">
+      <screen x="0" y="25" width="1536" height="870" />
     </state>
     <state width="1515" height="256" key="GridCell.Tab.0.bottom/0.0.1536.960@0.0.1536.960" timestamp="1606039600078" />
-    <state width="1515" height="256" key="GridCell.Tab.0.center" timestamp="1606039600076">
-      <screen x="0" y="0" width="1536" height="960" />
+    <state width="1515" height="224" key="GridCell.Tab.0.bottom/0.25.1536.870@0.25.1536.870" timestamp="1606203056408" />
+    <state width="1515" height="224" key="GridCell.Tab.0.center" timestamp="1606203056407">
+      <screen x="0" y="25" width="1536" height="870" />
     </state>
     <state width="1515" height="256" key="GridCell.Tab.0.center/0.0.1536.960@0.0.1536.960" timestamp="1606039600076" />
-    <state width="1515" height="256" key="GridCell.Tab.0.left" timestamp="1606039600075">
-      <screen x="0" y="0" width="1536" height="960" />
+    <state width="1515" height="224" key="GridCell.Tab.0.center/0.25.1536.870@0.25.1536.870" timestamp="1606203056407" />
+    <state width="1515" height="224" key="GridCell.Tab.0.left" timestamp="1606203056406">
+      <screen x="0" y="25" width="1536" height="870" />
     </state>
     <state width="1515" height="256" key="GridCell.Tab.0.left/0.0.1536.960@0.0.1536.960" timestamp="1606039600075" />
-    <state width="1515" height="256" key="GridCell.Tab.0.right" timestamp="1606039600077">
-      <screen x="0" y="0" width="1536" height="960" />
+    <state width="1515" height="224" key="GridCell.Tab.0.left/0.25.1536.870@0.25.1536.870" timestamp="1606203056406" />
+    <state width="1515" height="224" key="GridCell.Tab.0.right" timestamp="1606203056407">
+      <screen x="0" y="25" width="1536" height="870" />
     </state>
     <state width="1515" height="256" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1606039600077" />
-    <state x="368" y="218" key="Vcs.Push.Dialog.v2" timestamp="1606039913995">
-      <screen x="0" y="0" width="1536" height="960" />
+    <state width="1515" height="224" key="GridCell.Tab.0.right/0.25.1536.870@0.25.1536.870" timestamp="1606203056407" />
+    <state x="368" y="223" key="Vcs.Push.Dialog.v2" timestamp="1606176302480">
+      <screen x="0" y="25" width="1536" height="870" />
     </state>
     <state x="368" y="218" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1606039913995" />
+    <state x="368" y="223" key="Vcs.Push.Dialog.v2/0.25.1536.870@0.25.1536.870" timestamp="1606176302480" />
     <state x="518" y="231" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1606039835259">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
