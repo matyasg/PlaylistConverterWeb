@@ -14,6 +14,7 @@ import { TasksComponent } from './tasks/tasks.component';
 import { Table1111Component } from './table1111/table1111.component';
 import { SharedModule } from '../shared/shared.module';
 import {AppleSigninModule} from 'ngx-apple-signin';
+import {NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {AppleSigninModule} from 'ngx-apple-signin';
         CommonModule,
         DashboardRoutingModule,
         SharedModule,
-        AppleSigninModule
+        AppleSigninModule,
+        NgbDatepickerModule
     ]
 })
 export class DashboardModule { }

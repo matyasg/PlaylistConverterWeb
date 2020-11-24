@@ -2,6 +2,8 @@ import { Component, OnInit, ChangeDetectionStrategy, Input } from '@angular/core
 import { NbThemeService, NbMediaBreakpoint } from '@nebular/theme';
 import { switchMap } from 'rxjs/operators';
 import {Observable, of} from 'rxjs';
+import { ViewEncapsulation } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-table12',
@@ -11,6 +13,8 @@ import {Observable, of} from 'rxjs';
 })
 export class Table12Component implements OnInit {
   @Input('playlists') playlists: Observable<any>;
+  @Input('values') values: Observable<boolean[]>;
+  @Input() changeValue: (id: number) => void;
 
   value = false;
 
@@ -194,8 +198,7 @@ export class Table12Component implements OnInit {
     }
   };
 
-  constructor(private themeService: NbThemeService) {
-
+  constructor(private themeService: NbThemeService, private modalService: NgbModal) {
   }
 
   private getCurrentValue(breakpoint: NbMediaBreakpoint, propName: string, ...itemsArgs: any[]): string {
@@ -226,4 +229,7 @@ export class Table12Component implements OnInit {
   ngOnInit(): void {
   }
 
+  openScrollableContent(longContent) {
+    this.modalService.open(longContent, { scrollable: true });
+  }
 }

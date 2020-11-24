@@ -11,6 +11,9 @@ import {Observable, ObservableInput, of} from 'rxjs';
 })
 export class UsersTableComponent implements OnInit {
   @Input('playlists') playlists: Observable<any>;
+  @Input('values') values: Observable<boolean[]>;
+  @Input() changeValue: (id: number) => void;
+  @Input() getCoverage: () => void;
 
 
   color$ = this.themeService.onMediaQueryChange().pipe(

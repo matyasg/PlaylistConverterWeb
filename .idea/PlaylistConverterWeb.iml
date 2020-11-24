@@ -4,6 +4,12 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/.tmp" />
       <excludeFolder url="file://$MODULE_DIR$/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/dashboard/message-action-card" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/dashboard/message-list" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/dashboard/new-tasks-action-card" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/dashboard/system-action-card" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/dashboard/table1111" />
+      <excludeFolder url="file://$MODULE_DIR$/src/app/dashboard/tasks" />
       <excludeFolder url="file://$MODULE_DIR$/temp" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
     </content>

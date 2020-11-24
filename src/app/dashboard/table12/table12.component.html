@@ -1,3 +1,35 @@
+<ng-template #longContent let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+    <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+    <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+  </div>
+</ng-template>
+
 <table class="table Table12 table12 border">
   <thead  class="Table12_Header table12-header">
     <th class="column1">
@@ -22,27 +54,29 @@
     </th>
   </thead>
   <tbody>
-    <tr class="Table12_Row table12-row" *ngFor="let playlist of playlists|async">
+    <tr class="Table12_Row table12-row" *ngFor="let playlist of (playlists|async); let i=index">
       <td class="slot">
         <div class="space Space92 space92" >
-          <nb-checkbox class="Checkbox1 checkbox1" status="success" uiValueUpdate="updateUiCheckbox1" [ngModel]="value1">{{playlist.name}}</nb-checkbox>
+          <nb-checkbox class="Checkbox1 checkbox1" status="success" uiValueUpdate="updateUiCheckbox1"
+                       [ngModel]="(values|async)[i]" (checkedChange)="changeValue(i)">{{playlist.name}}</nb-checkbox>
         </div>
       </td>
       <td class="slot">
         <div class="space Space102 space102" >
-          <p class="Text19 text19 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color4$ | async)"></p>
+          <p class="Text19 text19 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color4$ | async)">{{playlist.numOfSongs}}</p>
         </div>
       </td>
       <td class="slot">
         <div class="space Space418 space418" >
-          <p class="Text22 text22 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color5$ | async)">Clifton Ortiz</p>
+          <p class="Text22 text22 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color5$ | async)" (click)="openScrollableContent(longContent)" *ngIf="playlist.missingSongs">{{ playlist.missingSongs.length}}</p>
         </div>
       </td>
       <td class="slot">
         <div class="space Space422 space422" >
-          <p class="Text25 text25 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color6$ | async)">{{ text1 }}</p>
+          <p class="Text25 text25 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color6$ | async)" *ngIf="playlist.coverage">{{ playlist.coverage*100}} %</p>
         </div>
       </td>
     </tr>
   </tbody>
 </table>
+
