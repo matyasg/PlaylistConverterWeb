@@ -10,6 +10,7 @@ import {User} from '../shared/model';
 import {stringify} from 'querystring';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
+import {LoadingScreenService} from '../services/loading-screen/loading-screen.service';
 
 declare let MusicKit: any;
 @Component({
@@ -33,9 +34,12 @@ export class DashboardComponent implements OnInit {
   valuesObservable$: Observable<boolean[]> = this.values.asObservable();
   checkedLists = new BehaviorSubject<boolean>(null);
   checkedListsObservable$: Observable<boolean> = this.checkedLists.asObservable();
-  lastLoggedService = '';
+  isCheckable = new BehaviorSubject<boolean>(false);
+  isCheckableObservable$: Observable<boolean> = this.isCheckable.asObservable();
+  lastLoggedService = new BehaviorSubject<string>('');
+  lastLoggedServiceObservable$: Observable<string> = this.lastLoggedService.asObservable();
 
-  constructor(private modalService: NgbModal, private _snackBar: MatSnackBar) {
+  constructor(private modalService: NgbModal, private _snackBar: MatSnackBar, private loadingService: LoadingScreenService) {
     this.music = MusicKit.configure({
       developerToken: env.dev_token,
       app: {
@@ -51,7 +55,7 @@ export class DashboardComponent implements OnInit {
 
   openSnackBar(message: string, action: string) {
     let config = new MatSnackBarConfig();
-    config.duration = 2000;
+    config.duration = 4000;
     config.politeness = 'polite';
     config.panelClass = ['background-red'];
     this._snackBar.open(message, null, config);
@@ -72,6 +76,7 @@ export class DashboardComponent implements OnInit {
   }
 
   getAMPlaylist = (): void => {
+    this.loadingService.show('');
     const options = {
       headers: {
         // Authorization: 'Bearer ' + MusicKit.getInstance().developerToken,
@@ -91,12 +96,14 @@ export class DashboardComponent implements OnInit {
       this.playlists.next(temp);
       this.values.next(new Array(this.playlists.getValue().length).fill(false));
       // console.log(this.playlists.getValue());
-      this.lastLoggedService = 'am';
+      this.lastLoggedService.next('am');
       this.checkedLists.next(false);
+      this.loadingService.hide();
     }, err => console.log(err));
   }
 
   loginSpotify = (): void => {
+    this.loadingService.show('');
     fetch('http://localhost:8090/api/spotify/getUser').then(res => res.json().then(result => {
       this.isSpotifyLoggedIn = true;
       // console.log(result);
@@ -107,10 +114,12 @@ export class DashboardComponent implements OnInit {
       };
       // console.log(tempUser);
       this.userSpotify.next(tempUser);
+      this.loadingService.hide();
     }));
   }
 
   getSpotifyPlaylist = (): void => {
+    this.loadingService.show('');
     fetch('http://localhost:8090/api/spotify/getPlaylists').then( res_ => res_.json().then( result_ => {
       const temp = [];
       console.log(result_);
@@ -120,15 +129,16 @@ export class DashboardComponent implements OnInit {
       this.playlists.next(temp);
       this.values.next(new Array(this.playlists.getValue().length).fill(false));
       // console.log(this.values.getValue());
-      this.lastLoggedService = 'sp';
+      this.lastLoggedService.next('sp');
       this.checkedLists.next(false);
-
+      this.loadingService.hide();
     }));
   }
 
   getCoverage = (): void => {
+    this.loadingService.show('');
     let url = '';
-    switch (this.lastLoggedService) {
+    switch (this.lastLoggedService.getValue()) {
       case 'sp': url = 'http://localhost:8090/api/spotify/getCoverage';
       break;
       case 'am': url = 'http://localhost:8090/api/am/getCoverage';
@@ -139,7 +149,7 @@ export class DashboardComponent implements OnInit {
           method: 'POST', // or 'PUT'
           headers: {
             'Content-Type': 'application/json',
-            'Music-User-Token': '' + this.lastLoggedService === 'am' ? MusicKit.getInstance().musicUserToken : '',
+            'Music-User-Token': MusicKit.getInstance().musicUserToken,
           },
           body: JSON.stringify({'values': this.values.getValue()}),
         }).then( res_ => res_.json().then( result_ => {
@@ -151,13 +161,17 @@ export class DashboardComponent implements OnInit {
       }
       this.playlists.next(temp);
       this.checkedLists.next(true);
+      this.loadingService.hide();
       // console.log(temp);
     }));
   }
 
   createPlaylists = (): void => {
+    const otherPlatform = this.lastLoggedService.getValue() !== 'sp' ? 'Spotify' : 'Apple Music';
+    if (this.isAppleMusicLoggedIn && this.isSpotifyLoggedIn) {
+    this.loadingService.show('');
     let url = '';
-    switch (this.lastLoggedService) {
+    switch (this.lastLoggedService.getValue()) {
       case 'sp': url = 'http://localhost:8090/api/spotify/createPlaylists';
         break;
       case 'am': url = 'http://localhost:8090/api/am/createPlaylists';
@@ -168,23 +182,40 @@ export class DashboardComponent implements OnInit {
           method: 'POST', // or 'PUT'
           headers: {
             'Content-Type': 'application/json',
-            'Music-User-Token': '' + this.lastLoggedService === 'sp' ? MusicKit.getInstance().musicUserToken : '',
+            'Music-User-Token': MusicKit.getInstance().musicUserToken,
           },
           body: JSON.stringify({'values': this.values.getValue()}),
         }).then( res_ => res_.json().then( result_ => {
       const temp = this.playlists.getValue();
-      this.openSnackBar('Playlist created in your ' + this.lastLoggedService === 'sp' ? 'Spotify' : 'Apple Music' + ' account' , 'Ok');
-
+      this.openSnackBar('Playlist created in your ' +  otherPlatform + ' account' , 'Ok');
+      this.loadingService.hide();
       // this.playlists.next(temp);
       // this.checkedLists.next(true);
       // console.log(temp);
     }));
+    }
+    else {
+      this.openSnackBar('Please register and then log in to the '+ otherPlatform +' service as well.', 'Ok');
+    }
   }
 
   changeValue = (id: number): void => {
+    console.log(this.values.getValue());
+    let existChecked = false;
     const temp = this.values.getValue();
     temp[id] = !temp[id];
+    temp.forEach(item => {
+      if (item) {
+        existChecked = true;
+      }
+    });
     this.values.next(temp);
+    if (existChecked && (this.lastLoggedService.getValue() === 'sp' || this.lastLoggedService.getValue() === 'am')){
+      this.isCheckable.next(true);
+    }
+    else {
+      this.isCheckable.next(false);
+    }
     // console.log(this.values.getValue());
   }
 

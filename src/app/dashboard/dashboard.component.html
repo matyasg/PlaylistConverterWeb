@@ -11,6 +11,8 @@
   <div class="space Space2 space2">
     <app-users-table [playlists]="this.playlistsObservable$" [values]="this.valuesObservable$"
                      [changeValue]="changeValue" [getCoverage]="getCoverage" [checkedLists]="this.checkedListsObservable$"
-                      [createPlaylists]="createPlaylists"></app-users-table>
+                      [createPlaylists]="createPlaylists" [lastLoggedService]="this.lastLoggedServiceObservable$"
+                      [isCheckable]="this.isCheckableObservable$"></app-users-table>
   </div>
 </div>
+

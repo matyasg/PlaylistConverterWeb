@@ -26,6 +26,7 @@ import { StoreRouterConnectingModule, routerReducer } from '@ngrx/router-store';
 import { LIGHT_THEME } from './theme';
 import { AppleSigninModule } from 'ngx-apple-signin';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {LoadingScreenComponent} from './components/loading-screen/loading-screen.component';
 
 const mediaBreakpoints: NbMediaBreakpoint[] = [
   {
@@ -53,6 +54,7 @@ const mediaBreakpoints: NbMediaBreakpoint[] = [
 @NgModule({
   declarations: [
     AppComponent,
+      LoadingScreenComponent,
   ],
   imports: [
     BrowserModule,

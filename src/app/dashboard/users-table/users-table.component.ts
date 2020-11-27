@@ -13,6 +13,8 @@ export class UsersTableComponent implements OnInit {
   @Input('playlists') playlists: Observable<any>;
   @Input('values') values: Observable<boolean[]>;
   @Input('checkedLists') checkedLists: Observable<boolean>;
+  @Input('isCheckable') isCheckable: Observable<boolean>;
+  @Input('lastLoggedService') lastLoggedService: Observable<string>;
   @Input() changeValue: (id: number) => void;
   @Input() getCoverage: () => void;
   @Input() createPlaylists: () => void;
@@ -36,28 +38,29 @@ export class UsersTableComponent implements OnInit {
 
   responsiveConfig =
   {
-    "0": {
-      "color": of(`basic`),
-      "color1": of(`basic`)
+    '0': {
+      'color': of(`basic`),
+      'color1': of(`basic`)
     },
-    "320": {
-      "color1": of(`basic`)
+    '320': {
+      'color1': of(`basic`)
     },
-    "480": {
-      "color1": of(`basic`)
+    '480': {
+      'color1': of(`basic`)
     },
-    "768": {
-      "color1": of(`basic`)
+    '768': {
+      'color1': of(`basic`)
     },
-    "1024": {
-      "color": of(`basic`),
-      "color1": of(`primary`),
-      "status": of(``),
-      "accent": of(``)
+    '1024': {
+      'color': of(`basic`),
+      'color1': of(`primary`),
+      'status': of(``),
+      'accent': of(``)
     }
   };
 
   constructor(private themeService: NbThemeService) {
+    let existChecked = false;
   }
 
   private getCurrentValue(breakpoint: NbMediaBreakpoint, propName: string, ...itemsArgs: any[]): string {
@@ -87,5 +90,6 @@ export class UsersTableComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

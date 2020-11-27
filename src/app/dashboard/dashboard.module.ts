@@ -15,6 +15,7 @@ import { Table1111Component } from './table1111/table1111.component';
 import { SharedModule } from '../shared/shared.module';
 import {AppleSigninModule} from 'ngx-apple-signin';
 import {NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
+import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
         DashboardRoutingModule,
         SharedModule,
         AppleSigninModule,
-        NgbDatepickerModule
+        NgbDatepickerModule,
+        MatButtonToggleModule
     ]
 })
 export class DashboardModule { }

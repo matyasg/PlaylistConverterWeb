@@ -2,7 +2,7 @@
 module.exports = config= {
     client_id : '0483ed85e3a644eca64f5a1f08f847ce',
     client_secret : 'c69f6da6498f4f00bf51aca5413e6478',
-    redirect_uri : 'http://localhost:8888/callback',
+    redirect_uri : 'http://localhost:4200/',
     privateKey : "-----BEGIN PRIVATE KEY-----\n" +
         "MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgb6+PxyBZwUeUU2mb\n" +
         "GUePOpWqhfp5z8/0KsVErndeH9GgCgYIKoZIzj0DAQehRANCAARExiHydRcUTV5A\n" +
