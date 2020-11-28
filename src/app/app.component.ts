@@ -70,7 +70,11 @@ export class AppComponent {
   }
 
   logOut(event) {
+      fetch('http://localhost:8090/api/spotify/logut').then((res)=>{
+          console.log(res);
+      }).catch(err => console.log(err));
       window.location.reload();
+
   }
 
   private getPaddingCssValue(paddings): string {

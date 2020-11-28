@@ -1,17 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="cc9e6854-8e42-4696-8574-a2b8d8bd15e8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/components/loading-screen/loading-screen.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/loading-screen/loading-screen.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/loading-screen/loading-screen.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/components/loading-screen/loading-screen.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/services/loading-screen/loading-screen.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/loading.interceptor.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/loading.interceptor.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/AuthKey_7792FD34HP.p8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/message-action-card/message-action-card.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/message-action-card/message-action-card.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/message-action-card/message-action-card.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/message-list/message-list.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/message-list/message-list.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/message-list/message-list.component.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/new-tasks-action-card/new-tasks-action-card.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/new-tasks-action-card/new-tasks-action-card.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/new-tasks-action-card/new-tasks-action-card.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/system-action-card/system-action-card.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/system-action-card/system-action-card.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/system-action-card/system-action-card.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/table1111/table1111.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/table1111/table1111.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/table1111/table1111.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/tasks/tasks.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/tasks/tasks.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/dashboard/tasks/tasks.component.ts" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/users-table/users-table.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/log-in/log-in-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/log-in/log-in.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/log-in/log-in.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/log-in/log-in.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/log-in/log-in.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/services/auth.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/loading-screen/loading-screen.service.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/services/auth.service.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +78,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kdnh1LSmIUxRceKFloXRzc2oiB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
@@ -88,7 +148,7 @@
       <workItem from="1606244904516" duration="2631000" />
       <workItem from="1606247952959" duration="3963000" />
       <workItem from="1606305195724" duration="11000" />
-      <workItem from="1606306504310" duration="12582000" />
+      <workItem from="1606306504310" duration="19821000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1606039908883</created>
@@ -118,29 +178,65 @@
       <option name="project" value="LOCAL" />
       <updated>1606251292625</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="ver 0.1 - state validations">
+      <created>1606485232004</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1606485232005</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init commit" />
     <MESSAGE value="getCoverage of spoty playlists in AM" />
     <MESSAGE value="ver 0.1" />
     <MESSAGE value="ver 0.1 - minor fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="ver 0.1 - minor fixes" />
+    <MESSAGE value="ver 0.1 - state validations" />
+    <option name="LAST_COMMIT_MESSAGE" value="ver 0.1 - state validations" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="25" width="1536" height="872" key="#Inspections" timestamp="1606478200144">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="0" y="25" width="1536" height="872" key="#Inspections/0.0.1536.960@0.0.1536.960" timestamp="1606478200144" />
-    <state x="347" y="40" key="CommitChangelistDialog2" timestamp="1606251292182">
-      <screen x="0" y="25" width="1536" height="870" />
+    <state x="0" y="25" width="1536" height="872" key="CommitChangelistDialog2" timestamp="1606485231650">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="347" y="66" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1606039908443" />
+    <state x="0" y="25" width="1536" height="872" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1606485231650" />
     <state x="347" y="40" key="CommitChangelistDialog2/0.25.1536.870@0.25.1536.870" timestamp="1606251292182" />
+    <state x="0" y="28" width="1536" height="932" key="DiffContextDialog" timestamp="1606485562487">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="0" y="28" width="1536" height="932" key="DiffContextDialog/0.0.1536.960@0.0.1536.960" timestamp="1606485562487" />
     <state width="1515" height="224" key="GridCell.Tab.0.bottom" timestamp="1606227064119">
       <screen x="0" y="25" width="1536" height="872" />
     </state>
@@ -165,15 +261,19 @@
     <state width="1515" height="256" key="GridCell.Tab.0.right/0.0.1536.960@0.0.1536.960" timestamp="1606039600077" />
     <state width="1515" height="224" key="GridCell.Tab.0.right/0.25.1536.870@0.25.1536.870" timestamp="1606203056407" />
     <state width="1515" height="224" key="GridCell.Tab.0.right/0.25.1536.872@0.25.1536.872" timestamp="1606227064119" />
-    <state x="368" y="223" key="Vcs.Push.Dialog.v2" timestamp="1606251294631">
-      <screen x="0" y="25" width="1536" height="870" />
+    <state x="0" y="25" width="1536" height="872" key="Vcs.Push.Dialog.v2" timestamp="1606485235239">
+      <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="368" y="218" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1606039913995" />
+    <state x="0" y="25" width="1536" height="872" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1606485235239" />
     <state x="368" y="223" key="Vcs.Push.Dialog.v2/0.25.1536.870@0.25.1536.870" timestamp="1606251294631" />
     <state x="518" y="231" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1606039835259">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="518" y="231" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog/0.0.1536.960@0.0.1536.960" timestamp="1606039835259" />
+    <state x="640" y="388" width="350" height="300" key="org.angular.cli.generate" timestamp="1606558765038">
+      <screen x="0" y="0" width="1536" height="960" />
+    </state>
+    <state x="640" y="388" width="350" height="300" key="org.angular.cli.generate/0.0.1536.960@0.0.1536.960" timestamp="1606558765038" />
     <state x="433" y="232" width="670" height="676" key="search.everywhere.popup" timestamp="1606480576573">
       <screen x="0" y="0" width="1536" height="960" />
     </state>

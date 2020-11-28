@@ -16,6 +16,7 @@ export const environment = {
   teamId : 'ZK3CF46MH4',
   keyId : '7792FD34HP',
   stateKey : 'spotify_auth_state',
+  dev_token: 'eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6Ijc3OTJGRDM0SFAifQ.eyJpYXQiOjE2MDU5MTQ4MTYsImV4cCI6MTYyMTQ2NjgxNiwiaXNzIjoiWkszQ0Y0Nk1INCJ9.wEOwbhX7M73T0V4STAvl3HiZBz5BwdLD49C1OAlD7FK-5Y6FEWhJFQwU1ZxrHy8deiMpN5GRwENQbQgaD-dSzA',
 };
 
 /*

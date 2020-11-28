@@ -27,6 +27,7 @@ import { LIGHT_THEME } from './theme';
 import { AppleSigninModule } from 'ngx-apple-signin';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {LoadingScreenComponent} from './components/loading-screen/loading-screen.component';
+import {LoadingInterceptor} from './shared/loading.interceptor';
 
 const mediaBreakpoints: NbMediaBreakpoint[] = [
   {
@@ -77,7 +78,11 @@ const mediaBreakpoints: NbMediaBreakpoint[] = [
     AppleSigninModule,
     MatSnackBarModule,
   ],
-  providers: [],
+  providers: [    {
+    provide: HTTP_INTERCEPTORS,
+    useClass: LoadingInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

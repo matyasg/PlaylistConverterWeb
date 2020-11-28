@@ -10,7 +10,7 @@
       </div>
       <p class="Text3 text3 text-alignment-left text-transform-none paragraph" [ngClass]="'text-' + (color2$ | async)">
 
-        <button id="login-btn" class="btn-primary" (click)="login()">Login</button>
+        <mat-button-toggle id="login-btn" class="btn-primary" (click)="login()">Login</mat-button-toggle>
 <!--        <apple-signin   [state]="yourStateVar"
                         [redirectURI]='"http://localhost:4200"'
                         [scope]="yourScopeVar"

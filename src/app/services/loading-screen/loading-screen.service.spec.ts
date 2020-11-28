@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AuthService } from './auth.service';
+import { LoadingScreenService } from './loading-screen.service';
 
-describe('AuthService', () => {
-  let service: AuthService;
+describe('LoadingScreenService', () => {
+  let service: LoadingScreenService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AuthService);
+    service = TestBed.inject(LoadingScreenService);
   });
 
   it('should be created', () => {
