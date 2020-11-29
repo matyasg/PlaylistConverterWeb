@@ -15,6 +15,7 @@ export class NewMessageActionCardComponent implements OnInit {
   @Input() user: Observable<User>;
   @Input() login: () => void;
   @Input() getPlaylist: () => void;
+  url =  'https://accounts.spotify.com/login?continue=https%3A%2F%2Faccounts.spotify.com%2Fauthorize%2F%3Fresponse_type%3Dcode%26redirect_uri%3Dhttp%253A%252F%252F0.0.0.0%253A8090%252Fapi%252Fspotify%252Fcallback%26scope%3Dplaylist-modify-public%2520playlist-modify-private%2520user-read-private%26client_id%3D0483ed85e3a644eca64f5a1f08f847ce';
 
   src$ = this.themeService.onMediaQueryChange().pipe(
     switchMap(([, breakpoint]) => this.getCurrentValue(breakpoint, 'src')),

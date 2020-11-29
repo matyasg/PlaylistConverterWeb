@@ -5,12 +5,13 @@ import {BehaviorSubject, Observable} from 'rxjs';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {filter} from 'rxjs/operators';
 import {Router} from '@angular/router';
-import {User} from '../shared/model';
+import {PlaylistResponse, User, UserResponse} from '../shared/model';
 import {stringify} from 'querystring';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {MatSnackBar, MatSnackBarConfig} from '@angular/material/snack-bar';
 import {LoadingScreenService} from '../services/loading-screen/loading-screen.service';
 import {environment} from '../../environments/environment';
+import { ActivatedRoute } from '@angular/router';
 
 declare let MusicKit: any;
 @Component({
@@ -38,9 +39,10 @@ export class DashboardComponent implements OnInit {
   isCheckableObservable$: Observable<boolean> = this.isCheckable.asObservable();
   lastLoggedService = new BehaviorSubject<string>('');
   lastLoggedServiceObservable$: Observable<string> = this.lastLoggedService.asObservable();
-
+  private code = '';
+  // tslint:disable-next-line:max-line-length
   constructor(private modalService: NgbModal, private _snackBar: MatSnackBar, private loadingService: LoadingScreenService,
-              private http: HttpClient) {
+              private http: HttpClient, private router: ActivatedRoute) {
     this.music = MusicKit.configure({
       developerToken: environment.dev_token,
       app: {
@@ -52,6 +54,13 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.router.queryParamMap.subscribe(res => {
+      console.log(res.get('code'));
+      this.code = res.get('code');
+      if (this.code !== null) {
+        this.loginSpotify();
+      }
+    });
   }
 
   openSnackBar(message: string, action: string) {
@@ -86,7 +95,7 @@ export class DashboardComponent implements OnInit {
         'Music-User-Token': '' + MusicKit.getInstance().musicUserToken,
       }
     };
-    this.http.get('http://localhost:8090/api/am/getPlaylists', options)
+    this.http.get<PlaylistResponse>(environment.baseURL + '/api/am/getPlaylists', options)
         .toPromise().then( res => {
       console.log(res);
       const temp = [];
@@ -105,23 +114,43 @@ export class DashboardComponent implements OnInit {
 
   loginSpotify = (): void => {
     // this.loadingService.show('');
-    this.http.get('http://localhost:8090/api/spotify/getUser').toPromise().then(result => {
-      this.isSpotifyLoggedIn = true;
-      // console.log(result);
-      const tempUser = {
-        name : result.display_name,
-        id : 'Logged in to Spotify',
-        url : result.images[0].url,
+    if (this.code !== null) {
+      const options = {
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+          'code': '' + this.code,
+        }
       };
-      // console.log(tempUser);
-      this.userSpotify.next(tempUser);
-      // this.loadingService.hide();
-    });
+      this.http.get<UserResponse>(environment.baseURL + '/api/spotify/getUser', options).toPromise().then(result => {
+        this.isSpotifyLoggedIn = true;
+        // console.log(result);
+        const tempUser = {
+          name: result.display_name,
+          id: 'Logged in to Spotify',
+          url: result.images[0].url,
+        };
+        // console.log(tempUser);
+        this.userSpotify.next(tempUser);
+        // this.loadingService.hide();
+        console.log(result);
+      }).catch(err => console.log(err));
+    }
+    else {
+      let url = 'https://accounts.spotify.com/authorize';
+      url += '?response_type=code';
+      url += '&client_id=' + encodeURIComponent(environment.client_id);
+      url += '&scope=' + encodeURIComponent(environment.scope);
+      url += '&redirect_uri=' + encodeURIComponent(environment.redirect_uri);
+      url += '&show_dialog=' + encodeURIComponent(true);
+      // url += '&state=' + encodeURIComponent(state);
+      window.location.href = (url);
+    }
   }
 
   getSpotifyPlaylist = (): void => {
     // this.loadingService.show('');
-    this.http.get('http://localhost:8090/api/spotify/getPlaylists').toPromise().then( result_ => {
+    this.http.get<PlaylistResponse>(environment.baseURL + '/api/spotify/getPlaylists').toPromise().then( result_ => {
       const temp = [];
       console.log(result_);
       result_.playlists[0].forEach(data => {
@@ -139,12 +168,12 @@ export class DashboardComponent implements OnInit {
   getCoverage = (): void => {
     let url = '';
     switch (this.lastLoggedService.getValue()) {
-      case 'sp': url = 'http://localhost:8090/api/spotify/getCoverage';
+      case 'sp': url = '/api/spotify/getCoverage';
       break;
-      case 'am': url = 'http://localhost:8090/api/am/getCoverage';
+      case 'am': url = '/api/am/getCoverage';
       break;
     }
-    this.http.post(url, { values: this.values.getValue()},
+    this.http.post(environment.baseURL + url, { values: this.values.getValue()},
         {
           headers: {
             'Content-Type': 'application/json',
@@ -168,12 +197,12 @@ export class DashboardComponent implements OnInit {
     if (this.isAppleMusicLoggedIn && this.isSpotifyLoggedIn) {
     let url = '';
     switch (this.lastLoggedService.getValue()) {
-      case 'sp': url = 'http://localhost:8090/api/spotify/createPlaylists';
+      case 'sp': url = '/api/spotify/createPlaylists';
         break;
-      case 'am': url = 'http://localhost:8090/api/am/createPlaylists';
+      case 'am': url = '/api/am/createPlaylists';
         break;
     }
-    this.http.post ( url , { values: this.values.getValue()},
+    this.http.post ( environment.baseURL + url , { values: this.values.getValue()},
         {
           headers: {
             'Content-Type': 'application/json',

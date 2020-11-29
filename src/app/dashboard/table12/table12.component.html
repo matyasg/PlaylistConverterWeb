@@ -8,6 +8,7 @@
   <div class="modal-body" >
     <div *ngFor="let item of (playlists|async)[this.choosenId].missingSongs; let i=index">
       <p *ngIf="item">{{objectToString(item)}}</p>
+      <hr>
     </div>
  </div>
   <div class="modal-footer">

@@ -7,7 +7,6 @@
       <app-new-message-action-card [platform]="'Spotify'" [login]="loginSpotify" [getPlaylist]="getSpotifyPlaylist" [user]="userSpotify"></app-new-message-action-card>
     </div>
   </div>
-
   <div class="space Space2 space2">
     <app-users-table [playlists]="this.playlistsObservable$" [values]="this.valuesObservable$"
                      [changeValue]="changeValue" [getCoverage]="getCoverage" [checkedLists]="this.checkedListsObservable$"

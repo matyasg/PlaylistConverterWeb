@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/PlaylistConverterWeb.iml" filepath="$PROJECT_DIR$/.idea/PlaylistConverterWeb.iml" />
+      <module fileurl="file://$USER_HOME$/WebstormProjects/spotifyauth/.idea/spotifyauth.iml" filepath="$USER_HOME$/WebstormProjects/spotifyauth/.idea/spotifyauth.iml" />
     </modules>
   </component>
 </project>
