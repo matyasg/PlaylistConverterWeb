@@ -26,24 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc9e6854-8e42-4696-8574-a2b8d8bd15e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.firebase/hosting.ZGlzdC9wbGF5bGlzdGNvbnZlcnRlci13ZWI.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/firebase-hosting-merge.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/firebase-hosting-pull-request.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PlaylistConverterWeb.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PlaylistConverterWeb.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.firebase/hosting.ZGlzdC9wbGF5bGlzdGNvbnZlcnRlci13ZWI.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.ZGlzdC9wbGF5bGlzdGNvbnZlcnRlci13ZWI.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/new-message-action-card/new-message-action-card.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/dashboard/table12/table12.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/dashboard/table12/table12.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +111,9 @@
       <workItem from="1606244904516" duration="2631000" />
       <workItem from="1606247952959" duration="3963000" />
       <workItem from="1606305195724" duration="11000" />
-      <workItem from="1606306504310" duration="42254000" />
+      <workItem from="1606306504310" duration="42850000" />
+      <workItem from="1606740716704" duration="970000" />
+      <workItem from="1607504344060" duration="220000" />
     </task>
     <task id="LOCAL-00001" summary="init commit">
       <created>1606039908883</created>
@@ -171,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606560078985</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="ver 0.1 - deploy">
+      <created>1606638544783</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1606638544784</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,6 +192,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -208,17 +202,18 @@
     <MESSAGE value="ver 0.1 - minor fixes" />
     <MESSAGE value="ver 0.1 - state validations" />
     <MESSAGE value="ver 0.1 - fetch changed to http in order to implement interceptor model for loading screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="ver 0.1 - fetch changed to http in order to implement interceptor model for loading screen" />
+    <MESSAGE value="ver 0.1 - deploy" />
+    <option name="LAST_COMMIT_MESSAGE" value="ver 0.1 - deploy" />
   </component>
   <component name="WindowStateProjectService">
     <state x="0" y="25" width="1536" height="872" key="#Inspections" timestamp="1606478200144">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
     <state x="0" y="25" width="1536" height="872" key="#Inspections/0.0.1536.960@0.0.1536.960" timestamp="1606478200144" />
-    <state x="0" y="25" width="1536" height="872" key="CommitChangelistDialog2" timestamp="1606560078683">
+    <state x="0" y="25" width="1536" height="870" key="CommitChangelistDialog2" timestamp="1606638544369">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="0" y="25" width="1536" height="872" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1606560078683" />
+    <state x="0" y="25" width="1536" height="870" key="CommitChangelistDialog2/0.0.1536.960@0.0.1536.960" timestamp="1606638544369" />
     <state x="347" y="40" key="CommitChangelistDialog2/0.25.1536.870@0.25.1536.870" timestamp="1606251292182" />
     <state x="0" y="28" width="1536" height="932" key="DiffContextDialog" timestamp="1606485562487">
       <screen x="0" y="0" width="1536" height="960" />
@@ -252,10 +247,10 @@
       <screen x="0" y="25" width="1536" height="876" />
     </state>
     <state x="277" y="99" key="SettingsEditor/0.25.1536.876@0.25.1536.876" timestamp="1606592761940" />
-    <state x="0" y="25" width="1536" height="872" key="Vcs.Push.Dialog.v2" timestamp="1606560081139">
+    <state x="0" y="25" width="1536" height="870" key="Vcs.Push.Dialog.v2" timestamp="1606638546518">
       <screen x="0" y="0" width="1536" height="960" />
     </state>
-    <state x="0" y="25" width="1536" height="872" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1606560081139" />
+    <state x="0" y="25" width="1536" height="870" key="Vcs.Push.Dialog.v2/0.0.1536.960@0.0.1536.960" timestamp="1606638546518" />
     <state x="368" y="223" key="Vcs.Push.Dialog.v2/0.25.1536.870@0.25.1536.870" timestamp="1606251294631" />
     <state x="518" y="231" key="com.intellij.openapi.vcs.changes.SpecificFilesViewDialog" timestamp="1606039835259">
       <screen x="0" y="0" width="1536" height="960" />
